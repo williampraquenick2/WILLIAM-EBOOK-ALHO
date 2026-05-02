@@ -81,6 +81,10 @@ export default function App() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col items-center gap-4"
           >
+            <div className="flex flex-col items-center">
+              <span className="text-zinc-500 text-sm font-bold line-through">De R$ 197,00</span>
+              <span className="text-white text-5xl font-display font-black tracking-tighter">Por apenas R$ 49,90</span>
+            </div>
             <button 
               onClick={scrollToPix}
               className="group relative w-full md:w-auto px-12 py-5 bg-brand text-black font-extrabold text-lg rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(34,197,94,0.3)] hover:shadow-[0_0_60px_rgba(34,197,94,0.5)]"
@@ -231,6 +235,10 @@ export default function App() {
 
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-display font-extrabold">🔑 PAGAMENTO VIA PIX</h2>
+            <div className="bg-brand/10 border border-brand/20 p-4 rounded-2xl inline-block">
+              <span className="text-gray-400 text-xs uppercase font-black block tracking-widest mb-1">Valor do Treinamento</span>
+              <span className="text-brand text-3xl font-display font-black">R$ 49,90</span>
+            </div>
             <p className="text-gray-400 font-medium">Basta seguir esses 3 passos simples</p>
           </div>
 
@@ -304,8 +312,8 @@ export default function App() {
         >
           <div className="bg-zinc-900/95 backdrop-blur-xl border border-white/10 p-4 rounded-3xl shadow-2xl flex items-center justify-between gap-4">
             <div className="flex flex-col">
-              <span className="text-[9px] font-black text-gray-500 uppercase tracking-widest">Treinamento</span>
-              <span className="text-sm font-bold text-brand uppercase truncate leading-none">ALHO E SÓ</span>
+              <span className="text-[9px] font-black text-gray-500 uppercase tracking-widest">Acesso por apenas</span>
+              <span className="text-sm font-bold text-brand uppercase truncate leading-none">R$ 49,90</span>
             </div>
             <button 
               onClick={scrollToPix}
