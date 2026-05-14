@@ -208,6 +208,49 @@ export default function App() {
         </div>
       </section>
 
+      {/* ⭐ PROVAS SOCIAIS (RESULTADOS) */}
+      <section className="py-24 px-4 bg-black overflow-hidden">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-4xl md:text-6xl font-display font-extrabold tracking-tighter">
+              Quem faz, <span className="text-brand underline decoration-wavy underline-offset-8">tem resultado</span>
+            </h2>
+            <p className="text-gray-400 font-medium max-w-xl mx-auto uppercase text-xs tracking-widest">
+              Veja o que os alunos estão conquistando todos os dias
+            </p>
+          </div>
+
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+            {[
+              "https://i.imgur.com/dMurrgz.jpeg",
+              "https://i.imgur.com/Xih4Fqm.jpeg",
+              "https://i.imgur.com/GCbdUr3.jpeg",
+              "https://i.imgur.com/R81Ny6x.jpeg",
+              "https://i.imgur.com/Bzqu6eV.jpeg",
+              "https://i.imgur.com/rHD8Wax.jpeg",
+              "https://i.imgur.com/jBvXL9c.jpeg"
+            ].map((src, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative group break-inside-avoid mb-6"
+              >
+                <div className="absolute inset-0 bg-brand/5 blur-xl group-hover:bg-brand/10 transition-all rounded-3xl" />
+                <img 
+                  src={src} 
+                  alt={`Resultado aluno ${i + 1}`}
+                  className="relative w-full rounded-2xl border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 🔒 SEGURANÇA */}
       <section className="py-12 bg-black border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 flex flex-wrap justify-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
