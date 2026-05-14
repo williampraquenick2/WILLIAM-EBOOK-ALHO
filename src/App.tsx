@@ -220,7 +220,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 scrollbar-hide -mx-4 px-4 mask-fade-edges">
             {[
               "https://i.imgur.com/dMurrgz.jpeg",
               "https://i.imgur.com/Xih4Fqm.jpeg",
@@ -232,20 +232,26 @@ export default function App() {
             ].map((src, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative group break-inside-avoid mb-6"
+                transition={{ delay: i * 0.05 }}
+                className="min-w-[280px] md:min-w-[350px] snap-center relative group"
               >
                 <div className="absolute inset-0 bg-brand/5 blur-xl group-hover:bg-brand/10 transition-all rounded-3xl" />
                 <img 
                   src={src} 
                   alt={`Resultado aluno ${i + 1}`}
-                  className="relative w-full rounded-2xl border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="relative w-full h-[500px] object-contain rounded-2xl border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
                 />
               </motion.div>
+            ))}
+          </div>
+          
+          <div className="flex justify-center gap-1 opacity-40 md:hidden">
+            {[...Array(7)].map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 bg-white rounded-full"></div>
             ))}
           </div>
         </div>
