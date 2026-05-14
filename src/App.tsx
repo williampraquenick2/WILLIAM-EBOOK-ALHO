@@ -293,7 +293,7 @@ export default function App() {
 
           <div className="space-y-6">
             <div className="p-6 bg-zinc-900/50 rounded-3xl border border-white/10 space-y-3">
-              <label className="text-[10px] font-black uppercase tracking-widest text-gray-500">Toque abaixo para copiar o PIX</label>
+              <label className="text-[10px] font-black uppercase tracking-widest text-gray-500">Chave PIX (CPF) - Toque abaixo para copiar</label>
               <div className="flex items-center gap-4 bg-black p-4 rounded-2xl border border-white/5 overflow-hidden">
                 <span className="flex-1 font-mono text-lg font-bold truncate tracking-tight text-brand">{pixKey}</span>
                 <button 
